@@ -1,0 +1,14 @@
+App --> App.jsx
+    Header
+        Logo
+        Nav -> ul>li's
+        Button
+
+    Main
+        SearchForm 
+        ChristmasList
+            ChristmasItem
+            ChristmasItem
+            ChristmasItem
+            ChristmasItem
+    Footer
