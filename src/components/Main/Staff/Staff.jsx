@@ -21,7 +21,7 @@ const Staff = () => {
       return pokemons.map((pokemon, i) => <PokemonCard pokemon={pokemon} key={uuidv4()} />);
   };
 
-  return <section>
+  return <section className="staff">
       {pokemons.length!=0? renderPokemons():<>
       
 <DNA
