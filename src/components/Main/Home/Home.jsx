@@ -1,4 +1,6 @@
 import { useContext, useState } from 'react';
+import { TextField, Button } from '@mui/material'
+
 
 // Contexto de usuario
 import { UserContext } from '../../../context/UserContext';
@@ -22,8 +24,10 @@ function Home() {
     <div>
       <h2>Update Username</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={newUsername} onChange={handleInputChange} />
-        <button type="submit">Update</button>
+        {/* <input type="text" value={newUsername} onChange={handleInputChange} /> */}
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" value={newUsername} onChange={handleInputChange} />
+        {/* <button type="submit">Update</button> */}
+        <Button type="submit" variant="contained">Update</Button>
       </form>
     </div>
   );

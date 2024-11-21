@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate }  from 'react-router-dom';
 import Nav from "./Nav";
+import { Button, Switch } from '@mui/material'
 
 // Contexto de usuario
 import { UserContext } from "../../context/UserContext";
@@ -21,10 +22,12 @@ const Header = () => {
       {username ? (
         <>
           <span>Hola, {username}</span>
-          <button onClick={() => updateUsername("")}>Logout</button>
+          {/* <button onClick={() => updateUsername("")}>Logout</button> */}
+          <Button size="small" color="error" style={{marginLeft: 20, marginRight:5}} onClick={() => updateUsername("")} variant="contained">Logout</Button>
         </>
       ) : (
-        <button onClick={() => handleOnClick()}>Login</button>
+        // <button onClick={() => handleOnClick()}>Login</button>
+        <Button size="small" color="success" style={{marginRight: 20}} onClick={() => handleOnClick()} variant="contained">Login</Button>
       )}
       <button onClick={toggleTheme}>
         Toggle Theme
